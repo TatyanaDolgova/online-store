@@ -1,7 +1,3 @@
-// const { json } = require("body-parser");
-
-// const { reject } = require("lodash");
-// const { resolve } = require("path");
 
 window.addEventListener("DOMContentLoaded", () => {
   // Tabs
@@ -207,13 +203,6 @@ window.addEventListener("DOMContentLoaded", () => {
     return await res.json();
   };
 
-  // getResource('http://localhost:3000/menu')
-  //   .then(data => {
-  //     data.forEach(({ img, altimg, title, descr, price }) => {
-  //       new MenuCard(img, altimg, title, descr, price, '.menu .container').render();
-  //     });
-  //   });
-
   axios.get('http://localhost:3000/menu')
     .then(data => {
       data.data.forEach(({ img, altimg, title, descr, price }) => {
@@ -302,8 +291,7 @@ window.addEventListener("DOMContentLoaded", () => {
     }, 4000);
   }
 
-  //Slider 
-
+  //Update slider 
   let slideIndex = 1;
   let offset = 0;
   const slides = document.querySelectorAll('.offer__slide'),
@@ -376,6 +364,6 @@ window.addEventListener("DOMContentLoaded", () => {
       current.textContent = slideIndex;
     }
   });
-
+  // Исправлена ошибка
 
 });
